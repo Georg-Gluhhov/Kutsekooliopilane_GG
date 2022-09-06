@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Kutsekooliopilane_GG
 {
+    //    Töötaja (asutus, amet,tootasu),
     class Tootaja : Isik
     {
+        string asutus;
+        string amet;
         double palk;
-        public Tootaja(double palk, string nimi, int synniAasta, sugu sugus) : base(nimi, synniAasta, sugus)
+
+        public Tootaja(string asutus, string amet,double palk, string nimi, int synniAasta, sugu sugus) : base(nimi, synniAasta, sugus)
         {
+            this.asutus = asutus;
+            this.amet = amet;   
             this.palk = palk;
         }
         public Tootaja(Tootaja tootaja)
         {
+            this.asutus=tootaja.asutus;
+            this.amet=tootaja.amet;
             this.palk = tootaja.palk;
             this.nimi = tootaja.nimi;
             this.synniAasta = tootaja.synniAasta;
@@ -27,21 +35,20 @@ namespace Kutsekooliopilane_GG
 
             int today = moment.Year;
             var Age = today - synniAasta;
-            Console.WriteLine($"{Age}");
-            Console.WriteLine(today);
+            Console.WriteLine($"age - {Age}");
 
         }
 
         public override void calculateIncome()
         {
             double end = (palk - 500) * 0.8 + 500;
-            Console.WriteLine(end);          
+            Console.WriteLine($"palk - {end}");          
 
         }
 
         public override void changeName()
         {
-            Console.WriteLine("Enter name");
+            Console.WriteLine("\nEnter name");
 
             this.nimi = Console.ReadLine();
 
@@ -49,7 +56,7 @@ namespace Kutsekooliopilane_GG
 
         public override void print_Info()
         {
-            Console.WriteLine($"{nimi}, {Sugus}, {synniAasta}");
+            Console.WriteLine($"\nnimi on {nimi}, sugus on {Sugus}, synniaasta on {synniAasta}, amet - {amet}, asutus {asutus}");
         }
     }
 }
