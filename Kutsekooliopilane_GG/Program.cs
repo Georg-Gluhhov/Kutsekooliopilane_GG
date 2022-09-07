@@ -13,6 +13,7 @@ Opilane.calculateAge();
 Opilane.calculateIncome();
 Opilane.changeName();
 Opilane.print_Info();
+Opilane.ChangeBirthdate();
 
 Kutsekooliopilane Kutsekooliopilane = new Kutsekooliopilane("test","test",3,120,"Matvei",1999, Opilane.sugu.mees);
 Opilane.print_Info();

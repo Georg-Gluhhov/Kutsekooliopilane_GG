@@ -56,7 +56,13 @@ namespace Kutsekooliopilane_GG
             this.nimi = Console.ReadLine();
 
         }
+        public override void ChangeBirthdate()
+        {
+            Console.WriteLine("\nEnter synniaasta");
 
+                this.synniAasta = Int32.Parse(Console.ReadLine());
+
+        }
         public override void print_Info()
         {
             Console.WriteLine($"\nnimi on {nimi}, sugus on {Sugus}, synniaasta on {synniAasta}, oppeasutus - {oppeasutus}, eriala - {eriala},kursus - {kursus},toetus - {toetus}");

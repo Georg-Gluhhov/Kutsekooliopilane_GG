@@ -27,5 +27,7 @@ namespace Kutsekooliopilane_GG
         public abstract void changeName();
         public abstract void calculateIncome();
 
+        public abstract void ChangeBirthdate();
+
     }
 }
